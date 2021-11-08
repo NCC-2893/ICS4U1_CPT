@@ -1,4 +1,14 @@
+/**
+ * Marcus Moreira
+ * 11/07/2021
+ * Velocity.java
+ */
+
 public class Velocity {
+    // The Velocity Class calculates the time, speed and distance 
+    // of to objects that intercept when given the acceleration in meters/second of the first object
+    // and the constant speed of the second object in Km/h.
+    
     private double constantSpeed;
     private double accelerationInSeconds;
 
@@ -24,25 +34,36 @@ public class Velocity {
     }
 
     private double halfOfAcceleration(){
-        return 0.5 * this.accelerationInSeconds;
+        // Get half of the acceleration
+
+        return this.accelerationInSeconds/2;
     }
     
     private double divideConstantSpeedByAcceleration(){
+        // Get the quotient of the constant speed and the acceleration
+
         return this.constantSpeed/this.accelerationInSeconds;
     }
 
     public double timeAtIntercept(){
+        // Time in seconds it takes the first object to intercept the second object
+
         double time = divideConstantSpeedByAcceleration()/halfOfAcceleration();
         return time;
     }
 
     public double distanceAtIntercept(){
+        // Distance in meters it takes for the first object to intercept the seconf object
+
         return divideConstantSpeedByAcceleration() * timeAtIntercept();
     }
 
     public double speedAtIntercept(){
+        // Speed in Km/h for the first to the second object
+
+        double conversionFor_ms_To_Kmh = 3.6;
         double speedMS = this.accelerationInSeconds * timeAtIntercept();
-        double speedKH = speedMS * 3.6;
+        double speedKH = speedMS * conversionFor_ms_To_Kmh;
         return speedKH;
     }
 }
