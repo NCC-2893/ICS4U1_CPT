@@ -19,11 +19,8 @@ public class Main {
         sort.bubbleSort(vel);
         
         for (Velocity v: vel){
-            System.out.println(v.getConstantSpeed());
-            System.out.println(v.timeAtIntercept());
-            System.out.println(v.distanceAtIntercept());
-            System.out.println(v.speedAtIntercept());
-            System.out.println();
+            System.out.println(v.toString());
         }
+        System.out.println();
     }
 }
