@@ -18,9 +18,7 @@ public class Main {
         SortArray sort = new SortArray();
         sort.bubbleSort(vel);
         
-        for (Velocity v: vel){
-            System.out.println(v.toString());
-        }
-        System.out.println();
+       CreateFile DataFile = new CreateFile();
+       DataFile.createFile(vel);
     }
 }

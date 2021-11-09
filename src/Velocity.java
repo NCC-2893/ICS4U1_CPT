@@ -49,7 +49,7 @@ public class Velocity {
         // Time in seconds it takes the first object to intercept the second object
 
         double time = divideConstantSpeedByAcceleration()/halfOfAcceleration();
-        
+
         return time;
     }
 
@@ -76,7 +76,7 @@ public class Velocity {
         output += Double.toString(this.accelerationInSeconds) + ", ";
         output += Double.toString(timeAtIntercept()) + ", ";
         output += Double.toString(distanceAtIntercept()) + ", ";
-        output += Double.toString(speedAtIntercept());
+        output += Double.toString(speedAtIntercept()) + "\r\n";
 
         return output;
     }
