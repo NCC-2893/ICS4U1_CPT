@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class CreateFile {        
     public void createFile(Velocity[] arr) throws IOException {          
-        // Create file
+        // Create a CSV file
         // If createNewFile is true, print "File created.", otherwise print "The file already exists."
         
         String fileName = "Solution.csv";              
