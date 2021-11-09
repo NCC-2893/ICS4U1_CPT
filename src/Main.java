@@ -13,10 +13,13 @@ public class Main {
         vel[2] = new Velocity(90,3.6);
         vel[3] = new Velocity(130,3.6);
         vel[4] = new Velocity(50,3.6);
-        
-        System.out.println();
 
+        System.out.println();
+        SortArray sort = new SortArray();
+        sort.bubbleSort(vel);
+        
         for (Velocity v: vel){
+            System.out.println(v.getConstantSpeed());
             System.out.println(v.timeAtIntercept());
             System.out.println(v.distanceAtIntercept());
             System.out.println(v.speedAtIntercept());

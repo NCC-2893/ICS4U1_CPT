@@ -33,37 +33,45 @@ public class Velocity {
         this.accelerationInSeconds = accelerationInSeconds;
     }
 
-    private double halfOfAcceleration(){
+    private double halfOfAcceleration() {
         // Get half of the acceleration
 
         return this.accelerationInSeconds/2;
     }
     
-    private double divideConstantSpeedByAcceleration(){
+    private double divideConstantSpeedByAcceleration() {
         // Get the quotient of the constant speed and the acceleration
 
         return this.constantSpeed/this.accelerationInSeconds;
     }
 
-    public double timeAtIntercept(){
+    public double timeAtIntercept() {
         // Time in seconds it takes the first object to intercept the second object
 
         double time = divideConstantSpeedByAcceleration()/halfOfAcceleration();
         return time;
     }
 
-    public double distanceAtIntercept(){
+    public double distanceAtIntercept() {
         // Distance in meters it takes for the first object to intercept the seconf object
 
         return divideConstantSpeedByAcceleration() * timeAtIntercept();
     }
 
-    public double speedAtIntercept(){
+    public double speedAtIntercept() {
         // Speed in Km/h for the first to the second object
 
         double conversionFor_ms_To_Kmh = 3.6;
         double speedMS = this.accelerationInSeconds * timeAtIntercept();
         double speedKH = speedMS * conversionFor_ms_To_Kmh;
         return speedKH;
+    }
+
+    public String toString() { 
+            System.out.println(v.getConstantSpeed());
+            System.out.println(v.timeAtIntercept());
+            System.out.println(v.distanceAtIntercept());
+            System.out.println(v.speedAtIntercept());
+            System.out.println();
     }
 }

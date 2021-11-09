@@ -12,11 +12,21 @@ public class CreateFile {
             System.out.println("File created.");
             // Write to file
             FileWriter myWriter = new FileWriter(fileName);
-            myWriter.write("Solution");
             myWriter.close();
         } else {
             System.out.println("The file already exists.");
         }
         System.out.println();           
     }
+
+    // public static void writeData(Velocity[] arr) {
+    //     for (Velocity v: arr){
+    //         myWriter.write();
+    //         System.out.println(v.getConstantSpeed());
+    //         System.out.println(v.timeAtIntercept());
+    //         System.out.println(v.distanceAtIntercept());
+    //         System.out.println(v.speedAtIntercept());
+    //         System.out.println();
+    //     }
+    // }
 }
