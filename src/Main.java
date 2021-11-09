@@ -14,11 +14,13 @@ public class Main {
         vel[3] = new Velocity(130,3.6);
         vel[4] = new Velocity(50,3.6);
 
+        // Sort the array using Bubble Sort based on the constant speed
         System.out.println();
         SortArray sort = new SortArray();
         sort.bubbleSort(vel);
         
-       CreateFile DataFile = new CreateFile();
-       DataFile.createFile(vel);
+        // Create a CSV file with calculated resualts to intercept object
+        CreateFile DataFile = new CreateFile();
+        DataFile.createFile(vel);
     }
 }

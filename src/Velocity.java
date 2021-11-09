@@ -70,6 +70,8 @@ public class Velocity {
     }
 
     public String toString() { 
+        //
+        
         String output = new String();
 
         output = Double.toString(this.constantSpeed) + ", "; 
