@@ -4,16 +4,23 @@
  * Main.java
  */
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) throws Exception {
-        Velocity vel = new Velocity(100,3.6);
-        System.out.println(vel.timeAtIntercept());
-        System.out.println(vel.distanceAtIntercept());
-        System.out.println(vel.speedAtIntercept());
+        Velocity[] vel = new Velocity[5];
+        
+        vel[0] = new Velocity(80,3.6);
+        vel[1] = new Velocity(100,3.6);
+        vel[2] = new Velocity(90,3.6);
+        vel[3] = new Velocity(130,3.6);
+        vel[4] = new Velocity(50,3.6);
+        
+        System.out.println();
+
+        for (Velocity v: vel){
+            System.out.println(v.timeAtIntercept());
+            System.out.println(v.distanceAtIntercept());
+            System.out.println(v.speedAtIntercept());
+            System.out.println();
+        }
     }
 }
