@@ -70,7 +70,8 @@ public class Velocity {
     }
 
     public String toString() { 
-        //
+        // This method will be used in createFile()
+        // This method organizes the information provided by the user and calculated by the privious methods   
         
         String output = new String();
 

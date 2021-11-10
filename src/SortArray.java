@@ -5,7 +5,7 @@
  */
 
 public class SortArray {
-    // 
+    // Sort the array using Bubble Sort based on the constant speed 
 
     public void bubbleSort(Velocity[] arr) {
 		for (int i = 0; i < arr.length; i++) {

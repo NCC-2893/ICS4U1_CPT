@@ -8,9 +8,10 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class CreateFile {        
+public class CreateFile {    
+    // Create a CSV file with calculated resualts to intercept object 
+
     public void createFile(Velocity[] arr) throws IOException {          
-        // Create a CSV file
         // If createNewFile is true, print "File created.", otherwise print "The file already exists."
         
         String fileName = "Solution.csv";              
